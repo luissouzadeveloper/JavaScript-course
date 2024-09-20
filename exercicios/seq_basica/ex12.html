@@ -1,0 +1,27 @@
+<!--  
+Crie um programa que leia o preço de um produto, calcule e mostre o seu
+PREÇO PROMOCIONAL, com 5% de desconto. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+</head>
+<body>
+    <script>
+        const precoProd = Number(prompt('Informe o preço do produto R$'));
+
+        const desconto = 5
+
+        const precoPromo = (desconto / 100) * precoProd;
+
+        const precoFinal = precoProd - precoPromo;
+
+        document.write(`O preço final é R$${precoFinal}`);
+    </script>
+</body>
+</html>
+
+

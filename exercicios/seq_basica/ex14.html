@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        A locadora de carros precisa da sua ajuda para cobrar seus serviços. Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço total a pagar, sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado.
+        */
+
+        const kmPercorrido = Number(prompt('Informe a quantidade de km percorrido: '));
+        const qntdDias = Number(prompt('Informe a quantidades de dias que foi alugado: '));
+
+        const custoDia = 0.20; 
+        const custoKM = 90;
+
+        const precoTotal = (custoDia * qntdDias) + (custoKM + kmPercorrido);
+
+        document.write(`Quantidade de km percorrido: ${kmPercorrido} <br>`);
+        document.write(`Quantidade de dias alugado: ${qntdDias} <br>`);
+        document.write(`O preço total foi de R$${precoTotal}`);
+
+        // Função para calcular o custo do aluguel
+        // function calcularCusto() {
+        //     // Solicita a quantidade de dias alugados
+        //     let dias = parseInt(prompt("Digite a quantidade de dias que o carro foi alugado:"));
+
+        //     // Solicita a quantidade de Km percorridos
+        //     let kmPercorridos = parseFloat(prompt("Digite a quantidade de Km percorridos:"));
+
+        //     // Definindo os preços
+        //     const precoPorDia = 90; // R$90 por dia
+        //     const precoPorKm = 0.20; // R$0,20 por Km rodado
+
+        //     // Calcula o custo total
+        //     let custoTotal = (dias * precoPorDia) + (kmPercorridos * precoPorKm);
+
+        //     // Exibe o resultado
+        //     alert("O preço total a pagar é: R$" + custoTotal.toFixed(2));
+        // }
+
+        // // Chama a função
+        // calcularCusto();
+
+    </script>
+</body>
+
+</html>
