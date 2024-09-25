@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <script>
+        /*
+            Escreva um algoritmo que leia dois números inteiros e compare-os, mostrando na tela uma das mensagens abaixo:
+            - O primeiro valor é o maior
+            - O segundo valor é o maior
+            - Não existe valor maior, os dois são iguais
+        */
+
+        const n1 = Number(prompt('Informe o 1º valor: '))
+        const n2 = Number(prompt('Informe o 2º valor: '))
+
+        if (n1 > n2) {
+            document.write(`O valor ${n1} é maior que o ${n2}`);
+        } else if(n2 > n1) {
+            document.write(`O valor ${n2} é maior que o ${n1}`);
+        } else {
+            document.write(`O valores ${n1} e ${n2} são iguais`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+    <script>
+        /*
+            Crie um programa que leia o tamanho de três segmentos de reta. Analise seus comprimentos e diga se é possível formar um triângulo com essas retas. Matematicamente, para três segmentos formarem um triângulo, o comprimento de cada lado deve ser menor que a soma dos outros dois.
+        */
+
+        const segmento1 = Number(prompt('Informe o 1º segmento: '));
+        const segmento2 = Number(prompt('Informe o 2º segmento: '));
+        const segmento3 = Number(prompt('Informe o 3º segmento: '));
+
+        if (segmento1 + segmento2 > segmento3 
+        && segmento1 + segmento3 > segmento2
+        && segmento2 + segmento3 > segmento1) {
+            document.write('É possível formar um triângulo!');
+        } else {
+            document.write('Não é possível formar um triângulo!');
+        }
+    </script>
+</body>
+</html>
