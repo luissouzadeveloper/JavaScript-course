@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. O aluguel de um carro custa R$90 por dia para carro popular e R$150 por dia para carro de luxo. Além disso, o cliente paga por Km percorrido. Faça um programa que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e quantos Km foram percorridos. No final mostre o preço a ser pago de acordo com a tabela a seguir:
+        - Carros populares (aluguel de R$90 por dia)
+        - Até 100Km percorridos: R$0,20 por Km
+        - Acima de 100Km percorridos: R$0,10 por Km
+        - Carros de luxo (aluguel de R$150 por dia)
+        - Até 200Km percorridos: R$0,30 por Km
+        - Acima de 200Km percorridos: R$0,25 por Km
+        */
+
+        const tipoCarro = prompt('Informe o tipo de carro: (P/L)');
+        const qntDias = Number(prompt('Informe a quantidade de dias de aluguel: '));
+        const kmDias = Number(prompt('Informe quantos km percorridos: '));
+
+        const precoPorDiaP = 90;
+        const precoPorDiaL = 150;
+        const precoKmP = 0.20;
+        const precoKmL = 0.30;
+
+        let custoTotal = 0;
+
+        if (tipoCarro === 'P') {
+            custoTotal += qntDias * precoPorDiaP;
+            if (kmDias < 100) {
+                custoTotal += kmDias * precoKmP;
+            } else {
+                custoTotal += kmDias * 0.10;
+            }
+        } else if (tipoCarro === 'L') {
+            custoTotal += qntDias * precoPorDiaL;
+            if (kmDias < 200) {
+                custoTotal += kmDias * precoKmL;
+            } else {
+                custoTotal += kmDias * 0.25;
+            }
+        }
+
+        document.write(`O valor a pagar será de R$${custoTotal.toFixed(2)}`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Refaça o algoritmo 25, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+        - EQUILÁTERO: todos os lados iguais
+        - ISÓSCELES: dois lados iguais
+        - ESCALENO: todos os lados diferentes
+        */
+
+        const segmento1 = Number(prompt('Informe o 1º segmento: '));
+        const segmento2 = Number(prompt('Informe o 2º segmento: '));
+        const segmento3 = Number(prompt('Informe o 3º segmento: '));
+
+        if (segmento1 + segmento2 > segmento3 && segmento1 + segmento3 > segmento2 && segmento2 + segmento3 > segmento1) {
+            document.write('Forma um triângulo');
+
+            if (segmento1 === segmento2 && segmento2 == segmento3) {
+            document.write('É um triângulo equilátero');
+        } else if (segmento1 === segmento2 || segmento2 === segmento3) {
+            document.write('É um triângulo isósceles');
+        } else if (segmento1 != segmento2 && segmento2 != segmento3) {
+            document.write('É um triângulo escaleno')
+        } else {
+            document.write('Inválido!');
+        }
+
+        } else {
+            document.write('Não forma um triângulo');
+        }
+    </script>
+</body>
+
+</html>

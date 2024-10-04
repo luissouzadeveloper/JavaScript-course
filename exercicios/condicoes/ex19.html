@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <script>
+        /*
+        Um programa de vida saudável quer dar pontos atividades físicas que podem ser trocados por dinheiro. O sistema funciona assim:
+        - Cada hora de atividade física no mês vale pontos
+        - até 10h de atividade no mês: ganha 2 pontos por hora
+        - de 10h até 20h de atividade no mês: ganha 5 pontos por hora
+        - acima de 20h de atividade no mês: ganha 10 pontos por hora
+        - A cada ponto ganho, o cliente fatura R$0,05 (5 centavos)
+        Faça um programa que leia quantas horas de atividade uma pessoa teve por mês, calcule e mostre quantos pontos ela teve e quanto dinheiro ela conseguiu ganhar.
+        */
+
+        const atividadeHoras = Number(prompt('Informe quantas horas de atividade teve por mês: '));
+        
+        let pontosAtividades = 0;
+
+        if (atividadeHoras <= 10) {
+            pontosAtividades = 2;
+            const pontosHoras = atividadeHoras * pontosAtividades;
+            const valorPontos = pontosHoras * 0.05
+            document.write(`Horas de atividade: ${atividadeHoras}<br>`);
+            document.write(`Quantidade de pontos: ${pontosHoras}<br>`);
+            document.write(`Quantidade de dinheiro: R$${valorPontos.toFixed(2)}`);
+        } else if (atividadeHoras <= 20) {
+            pontosAtividades = 5;
+            const pontosHoras = atividadeHoras * pontosAtividades;
+            const valorPontos = pontosHoras * 0.05
+            document.write(`Horas de atividade: ${atividadeHoras}<br>`);
+            document.write(`Quantidade de pontos: ${pontosHoras}<br>`);
+            document.write(`Quantidade de dinheiro: R$${valorPontos.toFixed(2)}`);
+        } else {
+            pontosAtividades = 10;
+            const pontosHoras = atividadeHoras * pontosAtividades;
+            const valorPontos = pontosHoras * 0.05
+            document.write(`Horas de atividade: ${atividadeHoras}<br>`);
+            document.write(`Quantidade de pontos: ${pontosHoras}<br>`);
+            document.write(`Quantidade de dinheiro: R$${valorPontos.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>

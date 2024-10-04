@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Desenvolva um programa que leia o nome de um funcionário, seu salário, quantos anos ele trabalha na empresa e mostre seu novo salário, reajustado de acordo com a tabela a seguir:
+        - Até 3 anos de empresa: aumento de 3%
+        - entre 3 e 10 anos: aumento de 12.5%
+        - 10 anos ou mais: aumento de 20%
+        */
+
+        // const nome = prompt('Informe o nome do funcionário: ');
+        // const salario = Number(prompt('Informe o salário do funcionário: '));
+        // const anosTrabalhados = Number(prompt('Informe os anos trabalhados na empresa: '));
+
+        // if (anosTrabalhados > 10) {
+        //     const novoSalario = (0.2 * 100) + salario;
+        //     document.write(`${nome} trabalha a ${anosTrabalhados} e seu novo salário é de R$${novoSalario}`);
+        // } else if (anosTrabalhados > 3) {
+        //     const novoSalario = (0.125 * 100) + salario;
+        //     document.write(`${nome} trabalha a ${anosTrabalhados} e seu novo salário é de R$${novoSalario}`); 
+        // } else {
+        //     const novoSalario = (0.03 * 100) + salario;
+        //     document.write(`${nome} trabalha a ${anosTrabalhados} e seu novo salário é de R$${novoSalario}`);
+        // }
+
+        const nome = prompt('Informe o nome do funcionário: ');
+        const salario = Number(prompt('Informe o salário do funcionário: '));
+        const anosTrabalhados = Number(prompt('Informe os anos trabalhados na empresa: '));
+
+        let aumento;
+
+        if (anosTrabalhados > 10) {
+            aumento = 0.20; // 20%
+        } else if (anosTrabalhados > 3) {
+            aumento = 0.125; // 12.5%
+        } else {
+            aumento = 0.03; // 3%
+        }
+
+        const novoSalario = salario + (salario * aumento);
+        document.write(`${nome} trabalha há ${anosTrabalhados} anos e seu novo salário é de R$${novoSalario.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <script>
+        /*
+        Faça um programa que leia a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m2. O programa também devemostrar a classificação desse terreno, de acordo com a lista abaixo:
+        - Abaixo de 100m2 = TERRENO POPULAR
+        - Entre 100m2 e 500m2 = TERRENO MASTER
+        - Acima de 500m2 = TERRENO VIP
+        */
+
+        const largura = Number(prompt('Informe a largura: '));
+        const comprimento = Number(prompt('Informe o comprimento: '));
+
+        const area = largura * comprimento;
+
+        if (area > 500) {
+            document.write(`Área: ${area}m². Terreno VIP`);
+        } else if (area > 100) {
+            document.write(`Área: ${area}m². Terreno Master`);
+        } else {
+            document.write(`Área: ${area}m². Terreno Popular`);
+        }
+    </script>
+</body>
+</html>
